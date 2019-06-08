@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppControle.InfraStructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190607225205_Inicial")]
+    [Migration("20190608004738_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,7 +53,7 @@ namespace AppControle.InfraStructure.Migrations
             modelBuilder.Entity("AppControle.AplicationCore.Entity.Pessoa", b =>
                 {
                     b.HasOne("AppControle.AplicationCore.Entity.PessoaTipo", "PessoaTipo")
-                        .WithMany()
+                        .WithMany("Pessoas")
                         .HasForeignKey("PessoaTipoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

@@ -1,4 +1,5 @@
 ﻿using AppControle.AplicationCore.Entity;
+using AppControle.InfraStructure.EntityConfig;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppControle.InfraStructure.Data
@@ -19,7 +20,8 @@ namespace AppControle.InfraStructure.Data
             modelBuilder.Entity<Pessoa>().ToTable("Pessoa");
             modelBuilder.Entity<PessoaTipo>().ToTable("PessoaTipo");
 
-            modelBuilder.Entity<PessoaTipo>().Property(e => e.Descricao).HasColumnType("Varchar(50)").IsRequired();
+            modelBuilder.ApplyConfiguration(new PessoaMap());
+            modelBuilder.ApplyConfiguration(new PessoaTipoMap());
         }
     }
 }

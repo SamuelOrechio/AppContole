@@ -16,9 +16,4 @@
     <ProjectReference Include="..\AppControle.AplicationCore\AppControle.AplicationCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EntityConfig\" />
-    <Folder Include="Repository\" />
-  </ItemGroup>
-
 </Project>

@@ -51,7 +51,7 @@ namespace AppControle.InfraStructure.Migrations
             modelBuilder.Entity("AppControle.AplicationCore.Entity.Pessoa", b =>
                 {
                     b.HasOne("AppControle.AplicationCore.Entity.PessoaTipo", "PessoaTipo")
-                        .WithMany()
+                        .WithMany("Pessoas")
                         .HasForeignKey("PessoaTipoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
